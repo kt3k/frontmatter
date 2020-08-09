@@ -5,7 +5,7 @@ A simple frontmatter parser for deno.
 # Usage
 
 ```ts
-import { parse } from "https://denopkg.com/kt3k/frontmatter/mod.ts";
+import { parse } from "https://deno.land/x/frontmatter/mod.ts";
 
 const example = `
 ---
