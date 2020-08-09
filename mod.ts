@@ -7,6 +7,18 @@ export type ParseResult = {
 
 const reFrontmatter = /^---([\s\S]*)^---$([\s\S]*)/m;
 
+/**
+ * Parses the front matter of the input string and returns the
+ * parse result object.
+ *
+ * When front matter pattern is not found, then it returns the
+ * result with empty data and input text as content.
+ *
+ * The front matter string is parsed as yaml.
+ *
+ * If the front matter yaml has an syntax error of yaml,
+ * then this function throws the error.
+ */
 export function parse(text: string): ParseResult {
   if (!reFrontmatter.test(text)) {
     return {
