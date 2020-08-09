@@ -20,3 +20,17 @@ author: John
     content: "# Content",
   });
 });
+
+Deno.test("no front matter", () => {
+  const example = `
+There is
+no front matter
+  `.trim()
+
+  const obj = parse(example);
+
+  assertEquals(obj, {
+    data: undefined,
+    content: example
+  })
+})
