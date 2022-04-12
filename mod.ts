@@ -5,7 +5,7 @@ export type ParseResult = {
   content: string;
 };
 
-const reFrontmatter = /^---([\s\S]*)^---$([\s\S]*)/m;
+const reFrontmatter = /^---([\s\S]*?)^---$([\s\S]*)/m;
 
 /**
  * Parses the front matter of the input string and returns the
