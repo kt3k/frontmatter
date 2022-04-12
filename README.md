@@ -39,14 +39,16 @@ where:
 
 ```ts
 type ParseResult = {
-  data: unknown,
-  content: string
-}
+  data: unknown;
+  content: string;
+};
 ```
 
-where `data` is parsed frontmatter object and `content` is the content after the frontmater.
+where `data` is parsed frontmatter object and `content` is the content after the
+frontmater.
 
-When it doesn't find any front matter pattern, it returns with `data` === `undefined`, and `content` === input `text`.
+When it doesn't find any front matter pattern, it returns with `data` ===
+`undefined`, and `content` === input `text`.
 
 # License
 
