@@ -21,6 +21,31 @@ author: John
   });
 });
 
+Deno.test("frontmatter search is non-greedy", () => {
+  const example = `
+---
+title: Hello
+author: John
+---
+# Heading 1
+
+---
+
+# Heading 2
+
+  `.trim();
+
+  const obj = parse(example);
+
+  assertEquals(obj, {
+    data: {
+      title: "Hello",
+      author: "John",
+    },
+    content: "# Heading 1\n\n---\n\n# Heading 2",
+  });
+});
+
 Deno.test("no front matter", () => {
   const example = `
 There is
