@@ -1,1 +1,1 @@
-export { parse as yamlParse } from "https://deno.land/std@0.64.0/encoding/yaml.ts";
+export { parse as yamlParse } from "https://deno.land/std@0.134.0/encoding/yaml.ts";
