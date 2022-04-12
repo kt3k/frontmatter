@@ -1,4 +1,4 @@
-# frontmatter v0.1.2
+# frontmatter v0.1.3
 
 A simple frontmatter parser for deno.
 
