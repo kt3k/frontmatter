@@ -1,7 +1,7 @@
 import { yamlParse } from "./deps.ts";
 
 export type ParseResult = {
-  data: unknown;
+  data: undefined | Record<string, string>;
   content: string;
 };
 

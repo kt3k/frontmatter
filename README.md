@@ -39,7 +39,7 @@ where:
 
 ```ts
 type ParseResult = {
-  data: unknown;
+  data: undefined | Record<string, string>;
   content: string;
 };
 ```
