@@ -1,3 +1,5 @@
+# Deprecated
+
 Front matter parser is now available in Deno Standard Modules.
 
 https://deno.land/std/encoding/front_matter.ts
