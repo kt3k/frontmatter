@@ -1,3 +1,29 @@
+Front matter parser is now available in Deno Standard Modules.
+
+https://deno.land/std/encoding/front_matter.ts
+
+Please use Standard Modules' version instead of this module.
+
+```
+import { extract } from "https://deno.land/std@0.145.0/encoding/front_matter.ts";
+import { assertEquals } from "https://deno.land/std@0.145.0/testing/asserts.ts";
+
+const example = `
+---
+title: Hello
+author: John
+---
+# Content
+`.trim();
+
+const { attrs, body, frontMatter } = extract<{ title: string, author: string }>(example);
+
+assertEquals(attrs.title, "Hello");
+assertEquals(attrs.author, "John");
+assertEquals(body, "# Content");
+assertEquals(frontMatter, "title: Hello\nauthor: John");
+```
+
 # frontmatter v0.1.4
 
 A simple frontmatter parser for deno.
