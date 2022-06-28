@@ -26,7 +26,7 @@ assertEquals(body, "# Content");
 assertEquals(frontMatter, "title: Hello\nauthor: John");
 ```
 
-# frontmatter v0.1.4
+# frontmatter v0.1.5
 
 A simple frontmatter parser for deno.
 
